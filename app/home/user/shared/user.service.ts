@@ -1,11 +1,11 @@
 ﻿import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
-import { HttpService } from './http.service';
+import { HttpService } from 'app/_services/http.service';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map'
 
-import { AuthenticationService } from './index';
-import { User } from '../_models/index';
+import { AuthenticationService } from 'app/_services/index';
+import { User } from 'index';
 
 @Injectable()
 export class UserService {
@@ -19,7 +19,7 @@ export class UserService {
         });
     }
 
-    getUsers():Observable<User[]> {
+    searchUser():Observable<User[]> {
         return this.http.get(`/user/`).map((res) => {
             return res.json();
         });

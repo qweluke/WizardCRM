@@ -1,6 +1,7 @@
 ﻿import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
+import { HttpModule, RequestOptions, XHRBackend } from '@angular/http';
 
 // used to create fake backend
 
@@ -8,11 +9,14 @@ import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
 
 import { AuthGuard } from './_guards/index';
-import { AuthenticationService, UserService } from './_services/index';
+import { AuthenticationService } from './_services/index';
+
 import { LoginComponent } from './login/index';
 import { HomeComponent } from './home/index';
 import { HttpService } from './_services/http.service';
-import { HttpModule, RequestOptions, XHRBackend } from '@angular/http';
+
+import { UserService } from './home/user/shared/user.service';
+import { UserListComponent } from './home/user/user-list/index';
 
 @NgModule({
     imports: [
@@ -24,7 +28,8 @@ import { HttpModule, RequestOptions, XHRBackend } from '@angular/http';
     declarations: [
         AppComponent,
         LoginComponent,
-        HomeComponent
+        HomeComponent,
+        UserListComponent
     ],
     providers: [
         {
