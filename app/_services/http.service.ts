@@ -22,12 +22,12 @@ export class HttpService  extends Http {
             }
             options.headers.set('Authorization', `Bearer ${token}`);
         } else {
+
+            let uri = url.url;
+            url.url = 'http://localhost:8000/api' + uri;
             // we have to add the token to the url object
             url.headers.set('Authorization', `Bearer ${token}`);
         }
-
-        let uri = url.url;
-        url.url = 'http://localhost:8000/api' + uri;
 
         return super.request(url, options).catch(this.catchAuthError(this));
     }
