@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="33660403-075b-41a7-97b2-631f061f62d1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/shared/sidebar/sidebar.component.ts" afterPath="$PROJECT_DIR$/app/home/shared/sidebar/sidebar.component.ts" />
     </list>
     <ignored path="client.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,11 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sidebar.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/home/shared/sidebar/sidebar.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7037037">
+            <state vertical-scroll-proportion="-11.4">
               <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6086956">
+              <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -82,7 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/home/shared/layout/index.ts" />
         <option value="$PROJECT_DIR$/app/home/shared/layout/layout.ts" />
         <option value="$PROJECT_DIR$/app/home/shared/navbar/sidebar.html" />
         <option value="$PROJECT_DIR$/app/home/shared/navbar/navbar.ts" />
@@ -133,6 +141,7 @@
         <option value="$PROJECT_DIR$/vendor/js/custom.js" />
         <option value="$PROJECT_DIR$/app/home/shared/sidebar/sidebar.html" />
         <option value="$PROJECT_DIR$/app/home/shared/sidebar/sidebar.component.ts" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -859,18 +868,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/home/shared/sidebar/sidebar.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6086956">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state vertical-scroll-proportion="-11.4">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/shared/sidebar/sidebar.component.ts">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7037037">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6086956">
+          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
           <folding />
         </state>
       </provider>
