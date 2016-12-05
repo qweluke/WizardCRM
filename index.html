@@ -1,15 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <base href="/" />
+    <base href="/"/>
     <title>Angular 2 JWT Authentication Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- bootstrap css -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
     <!-- application css -->
-    <link href="app.css" rel="stylesheet" />
+    <link href="/node_modules/nprogress/nprogress.css" rel="stylesheet"/>
+    <link href="/node_modules/animate.css/animate.css" rel="stylesheet"/>
+    <link href="/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="/node_modules/nprogress/nprogress.css" rel="stylesheet"/>
+
+    <link href="/vendor/css/custom.css" rel="stylesheet"/>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 
     <!-- polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -20,10 +27,19 @@
 
     <script src="systemjs.config.js"></script>
     <script>
-        System.import('app').catch(function (err) { console.error(err); });
+        System.import('app').catch(function (err) {
+            console.error(err);
+        });
     </script>
 </head>
 <body>
-    <app>Loading...</app>
+<app>Loading...</app>
+
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/vendor/js/fastclick.js"></script>
+<script src="/node_modules/nprogress/nprogress.js"></script>
+
+<script src="/vendor/js/custom.js"></script>
+
 </body>
 </html>

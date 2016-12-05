@@ -51,6 +51,11 @@ export class AuthenticationService {
                     // return false to indicate failed login
                     return false;
                 }
+            })
+            .catch(e => {
+                if (e.status === 401) {
+                    return Observable.throw('Bad credentials');
+                }
             });
     }
 

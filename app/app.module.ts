@@ -9,28 +9,24 @@ import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
 
 import { AuthGuard } from './_guards/index';
-import { AuthenticationService } from './_services/index';
+import { AuthenticationService, HttpService } from './_services/index';
+
+import { HomeModule } from './home/index';
+import { LoginModule } from './login/login.module';
 
 import { LoginComponent } from './login/index';
 import { HomeComponent } from './home/index';
-import { HttpService } from './_services/http.service';
-
-import { UserService } from './home/user/shared/user.service';
-import { UserListComponent } from './home/user/user-list/index';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
-        routing
+        routing,
+        HomeModule,
+        LoginModule
     ],
-    declarations: [
-        AppComponent,
-        LoginComponent,
-        HomeComponent,
-        UserListComponent
-    ],
+    declarations: [AppComponent],
     providers: [
         {
             provide: HttpService,
@@ -41,7 +37,6 @@ import { UserListComponent } from './home/user/user-list/index';
         },
         AuthGuard,
         AuthenticationService,
-        UserService
     ],
     bootstrap: [AppComponent]
 })
