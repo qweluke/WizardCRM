@@ -2,24 +2,18 @@
     <div class="menu_section">
         <h3>General</h3>
 
-
-        <accordion [closeOthers]="oneAtATime" class="nav side-menu">
-            <accordion-group heading="Dynamic Body Content">
-                <p>The body of the accordion group grows to fit the contents</p>
-            </accordion-group>
-            </accordion>
-
         <ul class="nav side-menu">
-            <li routerLink="/dashboard" routerLinkActive="active">
+            <li (click)="addExpandClass('home', $event)"  [ngClass]="{'active' : showMenu === 'home' }">
                 <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
+                <ul class="nav child_menu" >
                     <li><a href="index.html">Dashboard</a></li>
                     <li><a href="index2.html">Dashboard2</a></li>
                     <li><a href="index3.html">Dashboard3</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
+            <li (click)="addExpandClass('forms', $event)" [ngClass]="{'active' : showMenu === 'forms' }">
+                <a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu" >
                     <li><a href="form.html">General Form</a></li>
                     <li><a href="form_advanced.html">Advanced Components</a></li>
                     <li><a href="form_validation.html">Form Validation</a></li>
@@ -28,8 +22,9 @@
                     <li><a href="form_buttons.html">Form Buttons</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
+            <li (click)="addExpandClass('ui', $event)"  [ngClass]="{'active' : showMenu === 'ui' }">
+                <a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu" >
                     <li><a href="general_elements.html">General Elements</a></li>
                     <li><a href="media_gallery.html">Media Gallery</a></li>
                     <li><a href="typography.html">Typography</a></li>
