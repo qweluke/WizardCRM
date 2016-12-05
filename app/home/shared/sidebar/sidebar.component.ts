@@ -23,7 +23,7 @@ export class SidebarComponent {
         if ($li.is('.active')) {
             $li.removeClass('active active-sm');
             $('ul:first', $li).slideUp(function() {
-                setContentHeight();
+                //setContentHeight();
             });
         } else {
             // prevent closing menu if we are on child menu
@@ -36,7 +36,7 @@ export class SidebarComponent {
             $li.addClass('active');
 
             $('ul:first', $li).slideDown(function() {
-                setContentHeight();
+                //setContentHeight();
             });
         }
 
