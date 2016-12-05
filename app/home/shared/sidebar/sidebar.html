@@ -1,6 +1,14 @@
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
     <div class="menu_section">
         <h3>General</h3>
+
+
+        <accordion [closeOthers]="oneAtATime" class="nav side-menu">
+            <accordion-group heading="Dynamic Body Content">
+                <p>The body of the accordion group grows to fit the contents</p>
+            </accordion-group>
+            </accordion>
+
         <ul class="nav side-menu">
             <li routerLink="/dashboard" routerLinkActive="active">
                 <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>

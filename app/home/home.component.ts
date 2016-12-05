@@ -1,17 +1,17 @@
-﻿import { Component } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {FunctionsService} from './shared/index'
 
 @Component({
     moduleId: module.id,
     selector: 'dashboard-cmp',
+    providers: [FunctionsService],
     templateUrl: 'home.component.html',
-    providers: [FunctionsService]
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class HomeComponent {
 
     constructor(private functions:FunctionsService) {} // note the private keyword
-
 
     toggle(event:any) {
         return this.functions.xPanelToggle(event.srcElement);

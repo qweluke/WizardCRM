@@ -37,6 +37,7 @@
                 main: './main.js',
                 defaultExtension: 'js'
             },
+            'ng2-bootstrap': {defaultExtension: 'js'},
             rxjs: {
                 defaultExtension: 'js'
             }

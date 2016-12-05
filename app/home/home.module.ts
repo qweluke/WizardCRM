@@ -8,12 +8,14 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 import { UserModule } from './user/user.module';
 
+import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
     imports: [
         CommonModule,
         RouterModule,
         UserModule,
+        Ng2BootstrapModule
     ],
     declarations: [HomeComponent, TopNavComponent, SidebarComponent],
     exports: [HomeComponent, TopNavComponent, SidebarComponent]

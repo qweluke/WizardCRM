@@ -17,6 +17,7 @@ import { LoginModule } from './login/login.module';
 import { LoginComponent } from './login/index';
 import { HomeComponent } from './home/index';
 
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -24,7 +25,7 @@ import { HomeComponent } from './home/index';
         HttpModule,
         routing,
         HomeModule,
-        LoginModule
+        LoginModule,
     ],
     declarations: [AppComponent],
     providers: [
