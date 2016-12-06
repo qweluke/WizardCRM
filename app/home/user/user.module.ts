@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
-import { UserListComponent, UserComponent } from './index';
+import { RouterModule } from '@angular/router';
+import {DataTableModule,SharedModule} from 'primeng/primeng';
+
+import { UserComponent, UserDetailsModule } from './index';
+
 
 
 @NgModule({
     imports: [
-        RouterModule
+        RouterModule,
+        CommonModule,
+        UserDetailsModule,
+        DataTableModule,SharedModule
     ],
     declarations: [
-        UserComponent,
-        UserListComponent
+        UserComponent
     ],
-    exports: [UserComponent, UserListComponent]
+    exports: [UserComponent]
 })
 
-export class UserModule { }
+export class UserModule {
+}

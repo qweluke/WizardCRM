@@ -13,6 +13,8 @@
 
             'moment': 'node_modules/moment/moment.js',
             'ng2-bootstrap/ng2-bootstrap': 'node_modules/ng2-bootstrap/bundles/ng2-bootstrap.umd.js',
+            'primeng': 'npm:primeng',
+
 
             // our app is within the app folder
             app: 'app',
@@ -37,7 +39,12 @@
                 main: './main.js',
                 defaultExtension: 'js'
             },
+
             'ng2-bootstrap': {defaultExtension: 'js'},
+            primeng: {
+                defaultExtension: 'js'
+            },
+
             rxjs: {
                 defaultExtension: 'js'
             }
