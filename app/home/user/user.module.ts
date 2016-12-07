@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import {DataTableModule,SharedModule} from 'primeng/primeng';
 
-import { UserComponent, UserDetailsModule } from './index';
+import { UserComponent, UserDetailsModule, UserEditModule } from './index';
 
 
 
@@ -13,6 +13,8 @@ import { UserComponent, UserDetailsModule } from './index';
         RouterModule,
         CommonModule,
         UserDetailsModule,
+        UserEditModule,
+
         DataTableModule,SharedModule
     ],
     declarations: [

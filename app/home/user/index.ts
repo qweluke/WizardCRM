@@ -2,3 +2,4 @@
 export * from './user.routes';
 export * from './shared/index';
 export * from './details/index';
+export * from './edit/index';

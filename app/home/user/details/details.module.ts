@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import {ChartModule} from 'primeng/primeng';
 
 import { UserDetailsComponent } from './index';
+import { DaterangepickerComponent } from '../../shared/index';
 
 
 
@@ -15,7 +16,8 @@ import { UserDetailsComponent } from './index';
         ChartModule
     ],
     declarations: [
-        UserDetailsComponent
+        UserDetailsComponent,
+        DaterangepickerComponent
     ],
     exports: [UserDetailsComponent]
 })

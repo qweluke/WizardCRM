@@ -15,9 +15,10 @@ export class UserService {
     }
 
 
-    getUser(id:number) {
-        return this.http.get(`/user/${id}`).map((res) => {
-            return res.json();
+    getUser(id:number): Observable<User[]>{
+        return this.http
+            .get(`/user/?${id}`).map((res) => {
+                return res.json();
         });
     }
 

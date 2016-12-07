@@ -5,8 +5,7 @@ import {FunctionsService} from './shared/index'
     moduleId: module.id,
     selector: 'dashboard-cmp',
     providers: [FunctionsService],
-    templateUrl: 'home.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    templateUrl: 'home.component.html'
 })
 
 export class HomeComponent {

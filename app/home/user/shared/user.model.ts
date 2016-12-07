@@ -1,10 +1,13 @@
 ﻿export class User {
-    id: number;
-    username: string;
-    firstName: string;
-    lastName: string;
-    gender: string;
-    email: string;
-    lastLogin: string;
-    lastKogin: string;
+    constructor(
+        public id: number,
+        public username: string,
+        public firstName: string,
+        public lastName: string,
+        public gender: string,
+        public email: string,
+        public lastLogin: string,
+        public lastKogin: string
+    ) {  }
+
 }

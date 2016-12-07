@@ -5,4 +5,5 @@ export * from './navbar/index';
 export * from './sidebar/index';
 export * from './functions.service';
 export * from './shared.module';
+export * from './daterangepicker.component';
 
