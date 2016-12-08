@@ -42,7 +42,7 @@
                 </div>
                 <div class="x_content">
                     <br>
-                    <form (ngSubmit)="updateUser($event)"
+                    <form (ngSubmit)="updateUser($event)" #form="ngForm"
                             class="form-horizontal form-label-left input_mask col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
 
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
@@ -54,12 +54,14 @@
                         </div>
 
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                            <input type="text" class="form-control" id="inputSuccess3" placeholder="Last Name">
+                            <input [(ngModel)]="user.lastName" name="lastName"
+                                   type="text" class="form-control" id="inputSuccess3" placeholder="Last Name">
                             <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                         </div>
 
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email">
+                            <input [(ngModel)]="user.email" name="email"
+                                   type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email">
                             <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                         </div>
 
@@ -69,30 +71,31 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Default Input</label>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Select role</label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
-                                <input type="text" class="form-control" placeholder="Default Input">
+                                <select [(ngModel)]="user.roles" name="roles" class="form-control" multiple>
+                                    <option value="ROLE_USER">Choose option</option>
+                                    <option value="ROLE_ADMIN">Choose option</option>
+                                </select>
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Disabled Input </label>
-                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                <input type="text" class="form-control" disabled="disabled" placeholder="Disabled Input">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Read-Only Input</label>
-                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                <input type="text" class="form-control" readonly="readonly" placeholder="Read-Only Input">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
+                            <label class="col-md-3 col-sm-3 col-xs-12 control-label" for="enabled">Enabled
+                                <br>
+                                <small class="text-navy">Check if user is enabled</small>
                             </label>
+
                             <div class="col-md-9 col-sm-9 col-xs-12">
-                                <input class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                                <div class="checkbox">
+                                    <label>
+                                        <input [(ngModel)]="user.enabled" type="checkbox" name="enabled" id="enabled" value="">
+                                    </label>
+                                </div>
                             </div>
                         </div>
+
+
                         <div class="ln_solid"></div>
                         <div class="form-group">
                             <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">

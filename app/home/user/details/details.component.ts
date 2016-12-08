@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 
 import { User } from '../shared/index';
@@ -13,7 +13,7 @@ import {UserService} from '../../../_services/index';
 
 export class UserDetailsComponent implements OnInit {
 
-    public user:any;
+    @Input() user: User;
     public data:any;
 
     private options: Object = {
@@ -61,10 +61,15 @@ export class UserDetailsComponent implements OnInit {
 
     ngOnInit() {
 
-        this.route.params.subscribe(params => {
-            return this.http.getUser(+params['id']).subscribe((data)=> {
-                this.user = data;
-            });
+        this.route.params.forEach((params: Params) => {
+            if (params['id'] !== undefined) {
+                let id = +params['id'];
+                this.http.getUser(id)
+                    .subscribe(
+                        data => { this.user = <User>data },
+                        err => console.log('error', err)
+                    );
+            }
         });
     }
 
