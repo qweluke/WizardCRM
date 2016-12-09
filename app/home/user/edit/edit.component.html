@@ -42,8 +42,18 @@
                 </div>
                 <div class="x_content">
                     <br>
-                    <form (ngSubmit)="updateUser($event)" #form="ngForm"
+                    <form #update="ngForm" (ngSubmit)="update.form.valid && updateUser()" novalidate
                             class="form-horizontal form-label-left input_mask col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
+
+                        <div class="col-md-12 form-group has-feedback">
+                            <input [(ngModel)]="user.username" name="username" #firstName="ngModel"
+                                   type="text" class="form-control has-feedback-left"
+                                   id="username"
+                                   required
+                                   placeholder="Login">
+                            <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                            <div *ngIf="firstName.invalid && firstName.dirty" class="alert alert-danger">This field is required.</div>
+                        </div>
 
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                             <input [(ngModel)]="user.firstName" name="firstName"
@@ -68,6 +78,20 @@
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                             <input type="text" class="form-control" id="inputSuccess5" placeholder="Phone">
                             <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender</label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div id="gender" class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                        <input type="radio" name="gender" value="male" data-parsley-multiple="gender" data-parsley-id="12"> &nbsp; Male &nbsp;
+                                    </label>
+                                    <label class="btn btn-primary active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                        <input type="radio" name="gender" value="female" data-parsley-multiple="gender"> Female
+                                    </label>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="form-group">

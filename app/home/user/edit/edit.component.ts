@@ -18,25 +18,41 @@ import { Observable } from 'rxjs/Observable';
 export class UserEditComponent implements OnInit {
 
     user:User;
+    private userId:number;
 
     constructor(private route:ActivatedRoute,
                 private http:UserService) {
 
-    this.user = new User();
+        this.user = new User();
     }
 
     ngOnInit() {
 
         this.route.params.forEach((params:Params) => {
             if (params['id'] !== undefined) {
-                let id = +params['id'];
-                this.http.getUser(id)
-                    .subscribe(
-                        data => { this.user = <User>data; },
-                        err => console.log('error', err)
-                    );
+                this.userId = +params['id'];
             }
         });
+
+        if (this.userId) {
+            this.http.getUser(this.userId)
+                .subscribe(
+                    data => {
+                        this.user = <User>data;
+                    },
+                    err => console.log('error', err)
+                );
+        }
+    }
+
+    updateUser() {
+        this.http.updateUser(this.userId, this.user)
+            .subscribe(
+                data => {
+                    console.log(data);
+                },
+                err => console.log('error', err)
+            );
 
     }
 

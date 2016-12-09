@@ -4,6 +4,7 @@
     firstName: string;
     lastName: string;
     gender: string;
+    roles: any;
     email: string;
     lastLogin: string;
 }
